@@ -10,6 +10,8 @@ It produces the following kinds of plots:
 * simple hit counting for LAPPD pulses
 * Timing plot w.r.t. the beginning of the beamgate
 
+Data persistance for handling certain plots (i.e. PPS Event Counting) is handled using ROOT files, which are written to the `PathMonitoring` directory while processing each run file, by the `WriteToFile` function, so that we can handle all of the sub-runs incrementally, and plot them in a single plot.
+
 ## Configuration
 
 `MonitorLAPPDData` has the following configuration variables
